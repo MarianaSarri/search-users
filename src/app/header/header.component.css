@@ -1,0 +1,17 @@
+header.header {
+    background: #5f5b5b;
+    display: flex;
+    align-items: center;
+  }
+  
+  header.header .header-titulo {
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .header-titulo span {
+    color: rgb(216, 213, 213);
+    font-weight: normal;
+  }
