@@ -1,18 +1,18 @@
 
-.disposicao {
+.flex {
     width: 100%; 
     position: relative; 
-    display: inline-flex;
+    display: flex;
 }
   
-  .buscaButton:focus{
-      outline: none;
-  }
+.buscaButton:focus{
+    outline: none;
+}
 
-  label{
+label{
     position: absolute;
     bottom: 105%;
-    font-size: 1rem;  
+    font-size:1rem; 
     color: #5f5b5b; 
     margin-left: 3%;
 }
@@ -21,13 +21,13 @@
     width: 100%;
     border: 2px solid gray;
     border-right: none;
+    outline: none;
+    font-size: 13px;
     padding: 5px;
     height: 15px;
     border-radius: 15px 0 0 15px;
-    outline: none;
-    font-size: 12px;
 }
-
+   
 .buscaButton{
     width: 45px;
     height: 29px;
@@ -41,149 +41,50 @@
   }
 
 .center{
-    width: 80%;
+    width: 50%;
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
-
-/* min-width */
-@media screen and (min-width: 900px) {
-    
-    label{
-        position: absolute;
-        bottom: 105%;
-        font-size:1rem; 
-        color: #5f5b5b; 
-        margin-left: 3%;
-    }
-
-    .buscaInput{
-        width: 100%;
-        border: 2px solid gray;
-        border-right: none;
-        padding: 5px;
-        height: 20px;
-        border-radius: 20px 0 0 20px;
-        outline: none;
-        font-size: 13px;
-    }
-       
-    .buscaButton{
-        width: 50px;
-        height: 34px;
-        border: 1px solid gray;
-        background: gray;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 20px 20px 0;
-        cursor: pointer;
-        font-size: 15px;
-      }
-    
-    .center{
-        width: 50%;
-        position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* min-width & max-width */
-@media screen and (min-width: 480px) and (max-width: 900px) {
-    label{
-        position: absolute;
-        bottom: 105%;
-        font-size: 1rem; 
-        color: #5f5b5b; 
-        margin-left: 3%;
-    }
-
-    .buscaInput{
-        width: 100%;
-        border: 2px solid gray;
-        border-right: none;
-        padding: 5px;
-        height: 15px;
-        border-radius: 15px 0 0 15px;
-        outline: none;
-        font-size: 12px;
-    }
-
-    .buscaButton{
-        width: 45px;
-        height: 29px;
-        border: 1px solid gray;
-        background: gray;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 15px 15px 0;
-        cursor: pointer;
-        font-size: 15px;
-      }
-    
-    .center{
-        width: 60%;
-        position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* max device width */
-@media screen and (max-width: 480px) {
-    label{
-        position: absolute;
-        bottom: 100%;
-        font-size: 1rem;  
-        color: #5f5b5b; 
-        margin-left: 3%;
-    }
-
-    .buscaInput{
-        width: 100%;
-        border: 2px solid gray;
-        border-right: none;
-        padding: 5px;
-        height: 15px;
-        border-radius: 15px 0 0 15px;
-        outline: none;
-        font-size: 12px;
-    }
-
-    .buscaButton{
-        width: 45px;
-        height: 29px;
-        border: 1px solid gray;
-        background: gray;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 15px 15px 0;
-        cursor: pointer;
-        font-size: 15px;
-      }
-    
-    .center{
-        width: 80%;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* card-alerta -- inicio*/
 
 .card-alerta{
     border: 1px solid gray;
     border-radius: 0.25rem;
-    max-width: 420px;
+    width: 100%;
     position: absolute;
-    transform: translate(12%, 70%);
+    transform: translate(0, 50%);
 }
+
+/* min-width & max-width */
+@media screen and (min-width: 900px) {
+    
+    .center{
+        transform: translate(50%, 150%);
+    }
+
+    .card-alerta{
+        width: 70%;
+        transform: translate(20%, 50%);
+    }
+    
+}
+
+/* min-width & max-width */
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    
+    .center{
+        transform: translate(50%, 300%);
+    }
+    
+}
+
+/* max device width */
+@media screen and (max-width: 480px) {
+    .center{
+        width: 80%;
+        transform: translate(13%, 300%);
+    }
+}
+
+/* card-alerta -- inicio*/
 
 .card-alerta-header {
     padding: 1rem 1.25rem;

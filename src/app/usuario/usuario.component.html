@@ -1,8 +1,10 @@
 <div class="card-container">
     <img [src]="dadosUsuario.avatar_url" alt="user"/>
-    <h3>{{dadosUsuario.login}}</h3>
-    <h6>{{dadosUsuario.bio}}</h6>
-    <p>{{dadosUsuario.email}}</p>
+    <div style="margin: 2px;">
+        <h3>{{dadosUsuario.login}}</h3>
+        <h6>{{dadosUsuario.bio}}</h6>
+        <p>{{dadosUsuario.email}}</p>
+    </div>
     <div class="seguidores">
         <span>Seguidores: {{dadosUsuario.followers}}</span>
         <span>Seguindo: {{dadosUsuario.following}}</span>
