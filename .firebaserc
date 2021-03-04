@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "search-users-47524": {
+      "hosting": {
+        "search-users": [
+          "search-users-47524"
+        ]
+      }
+    }
+  }
+}
