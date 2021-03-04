@@ -1,16 +1,21 @@
 <div class="card-container">
-    <img src="" alt="user"/>
-    <h3>Nome</h3>
-    <h6>bio</h6>
-    <p>email</p>
-    <div class="seguidores" style="display: inline-flex; justify-content: center; align-items: center;">
-        <span>seguidores</span>
-        <span>seguindo</span>
+    <img [src]="dadosUsuario.avatar_url" alt="user"/>
+    <h3>{{dadosUsuario.login}}</h3>
+    <h6>{{dadosUsuario.bio}}</h6>
+    <p>{{dadosUsuario.email}}</p>
+    <div class="seguidores">
+        <span>Seguidores: {{dadosUsuario.followers}}</span>
+        <span>Seguindo: {{dadosUsuario.following}}</span>
     </div>
     <div class="repositorios">
         <span>Repositórios</span>
         <ul>
-            <li>ngfor</li>
+            <li *ngIf="arrayRepos == []">Este usuário não possui repossitório</li>
+            <ng-container *ngIf="arrayRepos != []">
+                <li *ngFor="let repo of arrayRepos">
+                    <a [href]="repo.html_url" target="_blank" rel="noopener noreferrer">{{repo.name}}</a>
+                </li>
+            </ng-container>
         </ul>
     </div>
 </div>

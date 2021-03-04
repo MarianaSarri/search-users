@@ -9,21 +9,21 @@ import { BuscaUsuarioService } from './busca-usuario.service';
 export class BuscaUsuarioComponent implements OnInit {
 
 
-  exibeMensagemNaoEncontrado: boolean = false;
+  alertaDados: boolean = true;
   dadosUsuario!: object;
 
   constructor(private BbuscaUsuarioService: BuscaUsuarioService) { }
 
   ngOnInit(): void {
-    console.log(this.dadosUsuario)
   }
 
   buscaUsuario(usu: any){
-    this.exibeMensagemNaoEncontrado = false;
     this.BbuscaUsuarioService.getUsuario(usu).subscribe(usu =>{
+      console.log(usu)
+      this.alertaDados = false;
       this.dadosUsuario = usu
     }, error => {
-      this.exibeMensagemNaoEncontrado = true;
+      this.alertaDados = true;
     })
   }
 

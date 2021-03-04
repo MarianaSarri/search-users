@@ -1,5 +1,5 @@
 
-.formatacao {
+.disposicao {
     width: 100%; 
     position: relative; 
     display: inline-flex;
@@ -9,13 +9,52 @@
       outline: none;
   }
 
+  label{
+    position: absolute;
+    bottom: 105%;
+    font-size: 1rem;  
+    color: #5f5b5b; 
+    margin-left: 3%;
+}
+
+.buscaInput{
+    width: 100%;
+    border: 2px solid gray;
+    border-right: none;
+    padding: 5px;
+    height: 15px;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    font-size: 12px;
+}
+
+.buscaButton{
+    width: 45px;
+    height: 29px;
+    border: 1px solid gray;
+    background: gray;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+.center{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* min-width */
 @media screen and (min-width: 900px) {
     
     label{
         position: absolute;
-        bottom: 100%;
-        font-size: 16px; 
+        bottom: 105%;
+        font-size:1rem; 
         color: #5f5b5b; 
         margin-left: 3%;
     }
@@ -50,22 +89,14 @@
         top: 20%;
         transform: translate(-50%, -50%);
     }
-
-    .center-usu{
-        width: 50%;
-        position: absolute;
-        left: 65%;
-        top: 65%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 /* min-width & max-width */
 @media screen and (min-width: 480px) and (max-width: 900px) {
     label{
         position: absolute;
-        bottom: 100%;
-        font-size: 15px; 
+        bottom: 105%;
+        font-size: 1rem; 
         color: #5f5b5b; 
         margin-left: 3%;
     }
@@ -100,14 +131,6 @@
         top: 20%;
         transform: translate(-50%, -50%);
     }
-
-    .center-usu{
-        width: 50%;
-        position: absolute;
-        left: 50%;
-        top: 65%;
-        transform: translate(-50%, -50%);
-    }
 }
 
 /* max device width */
@@ -115,7 +138,7 @@
     label{
         position: absolute;
         bottom: 100%;
-        font-size: 13px; 
+        font-size: 1rem;  
         color: #5f5b5b; 
         margin-left: 3%;
     }
@@ -150,12 +173,27 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
-    .center-usu{
-        width: 70%;
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
+
+/* card-alerta -- inicio*/
+
+.card-alerta{
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    max-width: 420px;
+    position: absolute;
+    transform: translate(12%, 70%);
+}
+
+.card-alerta-header {
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+.card-alerta-body {
+    padding: 1rem;
+  }
+
+  /* card-alerta -- fim*/

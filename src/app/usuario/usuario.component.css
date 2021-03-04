@@ -16,28 +16,35 @@
    .card-container {
     background-color: #5f5b5b;
     border-radius: 25px;
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 35%);
     color: #fff;
     padding: 30px 0 0;
-    position: relative;
-    width: 250px;
-    max-width: 100%;
+    position: absolute;
+    width: 50%;
     text-align: center;
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    transform: translate(-150%, 15%);
     justify-content: center;
-    flex-direction: column;
     margin-bottom: 30px;
    }
     
    .card-container img {
     border: 1px solid gray;
     border-radius: 50%;
-    padding: 7px;
     height: 100px;
     width: 100px;
    }
+
+   .seguidores {
+      display: flex;
+    }
+    
+    .seguidores > span {
+      -ms-flex: 1;
+      flex: 1;
+      font-size: 0.75rem;
+    }
+    
     
    .repositorios {
     background-color: rgb(73, 73, 73);
@@ -56,7 +63,24 @@
     list-style-type: none;
     margin: 5px;
     padding: 0;
+    overflow: auto;
+    height: 80px;
    }
+
+   .repositorios ul::-webkit-scrollbar {
+      width: 15px;               /* width of the entire scrollbar */
+    }
+    
+    .repositorios ul::-webkit-scrollbar-track {
+      background: #5f5b5b;        /* color of the tracking area */
+      border-radius: 20px; 
+    }
+    
+    .repositorios ul::-webkit-scrollbar-thumb {
+      background-color: rgb(216, 213, 213);    /* color of the scroll thumb */
+      border-radius: 20px;       /* roundness of the scroll thumb */
+      border: 3px solid rgb(185, 184, 184);  /* creates padding around scroll thumb */
+    }
     
    .repositorios ul li {
     border: 1px solid #2D2747;
@@ -65,4 +89,14 @@
     font-size: 12px;
     margin: 0 7px 7px 0;
     padding: 7px;
+   }
+
+   .repositorios ul li a {
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+   } 
+
+   ul li a:hover{
+      font-weight: bold;
    }

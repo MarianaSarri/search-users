@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="center">
  
-  <div class="formatacao">
+  <div class="disposicao">
     <label>
       Minha função é te ajudar a encontrar usuários presentes no GitHub. Use a busca abaixo para encontrar quem deseja.
     </label>
@@ -9,8 +9,19 @@
     <button type="button" class="buscaButton" (click)="buscaUsuario(buscaInput.value)">
       <i class="fas fa-search"></i>
     </button>
+
+    <app-usuario [dadosUsuario]="dadosUsuario" *ngIf="!alertaDados && dadosUsuario"></app-usuario>
+
+    <div class="card-alerta" *ngIf="alertaDados">
+        <div class="card-alerta-header">
+            Aviso
+        </div>
+        <div class="card-alerta-body">
+            Não existem informações do usuário para serem exibidas.
+        </div>
+    </div>
   </div>
 </div>
-<div class="center-usu" *ngIf="dadosUsuario">
-  <app-usuario [dadosUsuario]="dadosUsuario"></app-usuario>
+<div class="center-usu">
+
 </div>

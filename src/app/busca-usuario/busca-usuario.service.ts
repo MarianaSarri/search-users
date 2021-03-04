@@ -14,11 +14,6 @@ export class BuscaUsuarioService {
   constructor(private http: HttpClient) {}
 
   public getUsuario(usu: string): Observable<any> {
-    const httpHeaders: {headers: HttpHeaders} = {
-      headers: new HttpHeaders({
-       
-      })
-    };
-    return this.http.get<any>(this.urlBuscaUsuario + usu, httpHeaders);
+    return this.http.get<any>(this.urlBuscaUsuario + usu);
   }
 }

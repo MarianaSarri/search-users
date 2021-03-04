@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UsuarioService } from './usuario.service';
 
 @Component({
   selector: 'app-usuario',
@@ -7,11 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
-  @Input() dadosUsuario: object = {};
+  @Input() dadosUsuario: any;
 
-  constructor() { }
+  arrayRepos: Array<any> = [];
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
+    this.usuarioService.getRepositorio(this.dadosUsuario.repos_url).subscribe(repos =>{
+      this.arrayRepos = repos;
+    })
   }
 
 }
